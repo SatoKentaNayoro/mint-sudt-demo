@@ -1,3 +1,6 @@
+# capsule version
+version = "0.10.4"
+
 deployment = "deployment.toml"
 
 [[contracts]]

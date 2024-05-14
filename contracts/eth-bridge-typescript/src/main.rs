@@ -1,9 +1,5 @@
 #![no_std]
-#![no_main]
-#![feature(lang_items)]
-#![feature(alloc_error_handler)]
-#![feature(panic_info_message)]
-
+#![cfg_attr(not(test), no_main)]
 mod types;
 
 use ckb_std::{
@@ -18,6 +14,8 @@ use ckb_std::{
     },
 };
 use core::result::Result;
+use ckb_std::ckb_types::prelude::Entity;
+use molecule::prelude::{Entity as MoleculeEntity, Reader};
 
 entry!(entry);
 default_alloc!();
